@@ -8,12 +8,12 @@ import java.rmi.server.UnicastRemoteObject;
  * 加群获取视频：608583947
  * 风骚的Michael 老师
  */
-public class SayHelloImpl extends UnicastRemoteObject implements ISayHello{
+public class SayHelloImpl extends UnicastRemoteObject implements ISayHello {
 
     public SayHelloImpl() throws RemoteException {
     }
 
     public String sayHello(String name) throws RemoteException {
-        return "Hello Mic->"+name;
+        return "Hello Mic->" + name;
     }
 }

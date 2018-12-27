@@ -8,14 +8,14 @@
     <modules>
         <module>vip-0722-socket</module>
         <module>vip-0723-serializable</module>
-        <module>vip-0729</module>
+        <module>vip-0729-rmi</module>
         <module>vip-0730</module>
         <module>vip-0805</module>
         <module>vip-0809</module>
     </modules>
     <packaging>pom</packaging>
 
-    <name>michael-vip</name>
+    <name>rpc-base</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -50,6 +50,11 @@
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-recipes</artifactId>
             <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
         </dependency>
     </dependencies>
 </project>
