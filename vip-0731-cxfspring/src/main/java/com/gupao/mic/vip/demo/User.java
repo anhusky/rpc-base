@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * 加群获取视频：608583947
  * 风骚的Michael 老师
  */
-@XmlRootElement(namespace = "uu")
+@XmlRootElement
 public class User {
 
     private int id;
