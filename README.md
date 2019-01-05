@@ -1,4 +1,4 @@
-![](doc/media/1aa309d8.png)
+[](doc/media/1546689206_186387.jpg)
 [![license](https://img.shields.io/badge/license-Attribution--NonCommercial%204.0%20-brightgreen.svg)]()
 [![original](https://img.shields.io/badge/original-%E4%B8%AD%E5%8D%8E%E7%9F%B3%E6%9D%89-orange.svg)]()
 [![stars](https://img.shields.io/github/stars/doocs/advanced-java.svg)]()
