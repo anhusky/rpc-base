@@ -15,30 +15,31 @@ import java.util.concurrent.TimeUnit;
  */
 public class MasterChooseTest {
 
-    private final static String CONNECTSTRING="192.168.11.129:2181,192.168.11.134:2181," +
-            "192.168.11.135:2181,192.168.11.136:2181";
+    private final static String CONNECTSTRING = "139.199.32.78:2181";
 
 
     public static void main(String[] args) throws IOException {
-        List<MasterSelector> selectorLists=new ArrayList<>();
+        List<MasterSelector> selectorLists = new ArrayList<>();
         try {
-            for(int i=0;i<10;i++) {
-                ZkClient zkClient = new ZkClient(CONNECTSTRING, 5000,
-                        5000,
+            for (int i = 0; i < 10; i++) {
+                ZkClient zkClient = new ZkClient(
+                        CONNECTSTRING, 5000, 5000,
                         new SerializableSerializer());
                 UserCenter userCenter = new UserCenter();
                 userCenter.setMc_id(i);
                 userCenter.setMc_name("客户端：" + i);
 
-                MasterSelector selector = new MasterSelector(userCenter,zkClient);
+                MasterSelector selector = new MasterSelector(userCenter, zkClient);
                 selectorLists.add(selector);
-                selector.start();//触发选举操作
+
+                //触发选举操作
+                selector.start();
                 TimeUnit.SECONDS.sleep(1);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            for(MasterSelector selector:selectorLists){
+            for (MasterSelector selector : selectorLists) {
                 selector.stop();
             }
         }

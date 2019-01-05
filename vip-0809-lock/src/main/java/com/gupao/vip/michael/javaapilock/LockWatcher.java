@@ -10,7 +10,7 @@ import java.util.concurrent.CountDownLatch;
  * 加群获取视频：608583947
  * 风骚的Michael 老师
  */
-public class LockWatcher implements Watcher{
+public class LockWatcher implements Watcher {
 
     private CountDownLatch latch;
 
@@ -19,7 +19,7 @@ public class LockWatcher implements Watcher{
     }
 
     public void process(WatchedEvent event) {
-        if(event.getType()== Event.EventType.NodeDeleted){
+        if (event.getType() == Event.EventType.NodeDeleted) {
             latch.countDown();
         }
     }
