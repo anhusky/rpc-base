@@ -10,8 +10,8 @@
         <module>vip-0723-serializable</module>
         <module>vip-0729-rmi</module>
         <module>vip-0730-webservice</module>
-        <module>vip-0805</module>
-        <module>vip-0809</module>
+        <module>vip-0805-zookeeper</module>
+        <module>vip-0809-lock</module>
     </modules>
     <packaging>pom</packaging>
 
